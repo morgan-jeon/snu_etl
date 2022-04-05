@@ -159,9 +159,9 @@ def main():
 	s = requests.Session()
 	etl_login(s)
 	# fromVodID(s, "1910241")
-	newTable("activity(id int unique, name text, subject text, type text, url text, date bool)")
-	newTable("vod(id int unique, name text, playlist text, download bool)")
-	newTable("due(id int unique, start datetime, end datetime, did bool)")
+	# newTable("activity(id int unique, name text, subject text, type text, url text, date bool)")
+	# newTable("vod(id int unique, name text, playlist text, download bool)")
+	# newTable("due(id int unique, start datetime, end datetime, did bool)")
 	courses = etl_parse(s)
 	for course in courses:
 		print("-----------------------------------\n"+course['title']+"\n-----------------------------------")
