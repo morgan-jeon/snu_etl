@@ -31,7 +31,7 @@ def download(m3u8url, fname):
 		asyncio.run(downURL(ts_url[x], name, pbar))
 	pbar.close()
 
-	with open(os.path.join("vod",name+".mp4"), 'wb') as vod:
+	with open(os.path.join("vod",fname+".mp4"), 'wb') as vod:
 		for i in range(0, count):
 			name = ts_url[i].split('/')[-1]
 			with open(os.path.join('tmp', name), 'rb') as tmp:

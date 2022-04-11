@@ -11,7 +11,7 @@ def etl_login(s):
 
 	login_payload = {
 		"si_id": "morgan.jeon", 
-		"si_pwd": password, 
+		"si_pwd": "Moso1206!!", 
 		"si_redirect_address": "https://sso.snu.ac.kr/snu/ssologin_proc.jsp?si_redirect_address=http://etl.snu.ac.kr/"
 	}
 	req_sso = s.post("https://sso.snu.ac.kr/safeidentity/modules/auth_idpwd", data=login_payload)
